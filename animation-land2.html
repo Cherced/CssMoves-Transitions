@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANIMATION LAND2</title>
+    <style>
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      .phone {
+        position: relative;
+        border: 8px solid black;
+        border-radius: 40px;
+        height: 600px;
+        width: 300px;
+        background: #ccefff;
+        box-shadow: 0 19px 40px rgba(0, 0, 0, 0.3) inset,
+          0 9px 12px rgba(0, 0, 0, 0.22);
+      }
+      .layer-1 {
+        position: absolute;
+        z-index: 1;
+        bottom: 400px;
+        right: 50px;
+        animation-name: diamond1;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes diamond1 {
+        0% {
+          transform: rotate(8deg);
+        }      
+        60% {
+          transform: rotate(360deg);
+        }
+        100% {
+          transform: translateY(200px);
+        }
+      }
+      input [type="checkbox"] {
+        appearance: none;
+        cursor:pointer;
+        height: 50px;
+        margin: 0;  
+        top: 0;
+        width: 80px; 
+        position: relative;
+        z-index: 2; 
+      }
+      .layer-2 {
+        position: absolute;
+        z-index: 2;
+        bottom: 400px;
+        left: 50px;
+      }
+      .layer-3 {
+        position: absolute;
+        z-index: 4;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 0;
+        width: 240px;
+        height: 400px;
+        background: wheat;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        background: rgb(139, 79, 10);
+        box-shadow: 0 19px 40px rgba(0, 0, 0, 0.3) inset,
+          0 9px 12px rgba(0, 0, 0, 0.22);
+      }
+      .layer-3 img {
+        width: 220px;
+      }
+      .layer-4 {
+        position: absolute;
+        z-index: 5;
+        bottom: 250px;
+        left: 30px;
+      }
+      .layer-5 {
+        position: absolute;
+        z-index: 6;
+        left: 0;
+        right: 120px;
+        margin: 0 auto;
+        bottom: 0;
+        width: 180px;
+        height: 250px;
+        background: wheat;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 30px;
+        background: rgb(139, 79, 10);
+        box-shadow: 0 19px 90px rgba(0, 0, 0, 0.3) inset,
+          0 9px 12px rgba(0, 0, 0, 0.22);
+      }
+      .layer-5 img {
+        width: 180px;
+      }
+      .layer-6 {
+        position: absolute;
+        z-index: 7;
+        bottom: 200px;
+        right: 15px;
+      }
+      .layer-7 {
+        position: absolute;
+        z-index: 8;
+        right: 0;
+        left: 180px;
+        margin: 0 auto;
+        bottom: 0;
+        width: 120px;
+        height: 200px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 30px;
+        background: rgb(139, 79, 10);
+        box-shadow: 0 19px 90px rgba(0, 0, 0, 0.3) inset,
+          0 9px 12px rgba(0, 0, 0, 0.22);
+      }
+      .layer-7 img {
+        width: 120px;
+      }
+      .layer-8 {
+        position: absolute;
+        z-index: 9;
+        width: 100%;
+        bottom: -22px;
+        margin: 0;
+        padding: 0;
+      }
+      .layer-8 img {
+        width: 300px;
+        margin-right: -50px;
+      }
+      .layer-9 {
+        position: absolute;
+      }
+      .layer-10 {
+        position: absolute;
+      }
+      .layer-3::after,
+      .layer-5::after,
+      .layer-7::after {
+        content: "";
+        position: absolute;
+        left: -0px;
+        top: 0px;
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(135deg, #6aa067 25%, transparent 25%) -100px 0,
+          linear-gradient(-135deg, #6aa067 25%, transparent 25%) -100px 0,
+          linear-gradient(45deg, #6aa067 25%, transparent 25%),
+          linear-gradient(-45deg, #6aa067 25%, transparent 25%);
+        background-size: 40px 100px;
+        background-position: 140px 0 0 30px 0;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 30px;
+      }
+      .layer-3::before,
+      .layer-5::before,
+      .layer-7::before {
+        content: "";
+        position: absolute;
+        left: -0px;
+        top: 15px;
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(135deg, #a6543d 25%, transparent 25%) -100px 0,
+          linear-gradient(-135deg, #a6543d 25%, transparent 25%) -100px 0,
+          linear-gradient(45deg, #a6543d 25%, transparent 25%),
+          linear-gradient(-45deg, #a6543d 25%, transparent 25%);
+        background-size: 40px 80px;
+        background-position: 140px 0 0 30px 0;
+        box-shadow: 0 19px 90px rgba(0, 0, 0, 0.3) inset,
+          0 9px 12px rgba(0, 0, 0, 0.22);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="phone">
+      <div class="layer-1">
+        <img src="./assets/d1.png" alt="d1" />
+        <input type="checkbox">
+      </div>
+      <div class="layer-2">
+        <img src="./assets/d2.png" alt="d2" />
+      </div>
+      <div class="layer-3"></div>
+      <div class="layer-4">
+        <img src="./assets/d3.png" alt="d3" />
+      </div>
+      <div class="layer-5"></div>
+      <div class="layer-6">
+        <img src="./assets/d4.png" alt="d4" />
+      </div>
+      <div class="layer-7"></div>
+      <div class="layer-8"></div>
+      <div class="layer-9"></div>
+      <div class="layer-10"></div>
+    </div>
+  </body>
+</html>
